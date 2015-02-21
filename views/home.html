@@ -1,0 +1,18 @@
+<div ng-controller="HomeCtrl">
+	<snap-drawer>
+		<p>Hello from drawer!</p>
+		<button snap-close>Close</button>
+	</snap-drawer>
+	<snap-content>
+		<p>Hello {{name}}!</p>
+		<p>Drag to open or use the toggle button</p>
+		<button snap-toggle="">Toggle</button>
+		
+		<button ng-click='toggleModal()'>Open Modal Dialog</button>
+		<modal-dialog show='modalShown' width='750px' height='60%'>
+			<p>Modal Content Goes here<p>
+		</modal-dialog>
+
+	</snap-content>
+
+</div>
