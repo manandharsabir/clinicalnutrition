@@ -6,8 +6,6 @@ snap-content {
   border-left: 1px solid #ccc;
 }
 
-
-
 div.center {
     margin: 0;
     position: absolute;
@@ -18,3 +16,6 @@ div.center {
     vertical-align: middle;
     text-align: center;
 }
+
+#story_image{width: 30px;float:left;}
+#story_right{float:left;}

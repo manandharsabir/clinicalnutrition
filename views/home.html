@@ -1,15 +1,35 @@
 <div ng-controller="HomeCtrl">
 	<snap-drawer>
-		<p>Hello from drawer!</p>
-		<button snap-close>Close</button>
+
+		<div class="list-group ">
+			<a class="list-group-item ">
+				<img height="30px"/>
+				<text class="list-group-item-heading">Menu</text>
+			</a>
+			<a class="list-group-item ">
+				<img src="images/menu_alarm.png" width="30px"/>
+				<text class="list-group-item-heading">Estimate of anthropometric measures</text>
+				
+			</a>
+			<a class="list-group-item" style= "height:80px;">
+				<img  src="images/menu_alarm.png" width="30px"/>
+				<text class="list-group-item-heading">Assessment the adequacy of anthropometric indicators / mesaures</text>
+				
+			</a>
+			<a class="list-group-item ">
+				<img src="images/menu_alarm.png" width="30px"/>
+				<text class="list-group-item-heading">Exit</text>
+			</a>
+		</div>
 	</snap-drawer>
 	<snap-content>
-		<p>Hello {{name}}!</p>
-		<p>Drag to open or use the toggle button</p>
-		<button snap-toggle="">Toggle</button>
-		
-		<button ng-click='toggleModal()'>Open Modal Dialog</button>
-		
+
+		<div>
+			<a class="list-group-item" ng-click="optionClick()">
+				<img snap-toggle src="images/menu_alarm.png" width="30px"/><text>Clinical Nutrition</text>
+			</a>
+		</div>
+		<div ui-view></div>
 	</snap-content>
 
 </div>
