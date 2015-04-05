@@ -1,2 +1,0 @@
-# clinicalnutrition
-Clinical Nutrition project

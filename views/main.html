@@ -1,0 +1,84 @@
+<div ng-controller="MainCtrl">
+    <snap-drawers class = "drawer">
+		<snap-drawer>
+			<div class = "drawer-item-title">
+				<a class="list-group-item" style="background-color:transparent">
+					<img  height="30px"/><text>Menu</text>
+				</a>
+			</div>
+
+			<div class = "drawer-item">
+				<a class="list-group-item" style="background-color:transparent" ng-click="go('main.home')" snap-close>
+					<img src="images/sliding_menu.png" width="30px"/><text>Home</text>
+				</a>
+			</div>
+
+			
+
+			<div class = "drawer-item">
+				<a class="list-group-item" style="background-color:transparent" ng-click="go('main.estimateHeight')" snap-close>
+					<img src="images/option.png" width="30px"/><text>Estimate height (CM)</text>
+				</a>
+			</div>
+
+			<div class = "drawer-item">
+				<a class="list-group-item" style="background-color:transparent" ng-click="go('main.estimateWeight')" snap-close>
+					<img src="images/option.png" width="30px"/><text>Estimate weight (KG)</text>
+				</a>
+			</div>
+
+			<div class = "drawer-item">
+				<a class="list-group-item" style="background-color:transparent" ng-click="go('main.adjustedWeight')" snap-close>
+					<img src="images/option.png" width="30px"/><text>Adjusted weight</text>
+				</a>
+			</div>
+
+			<div class = "drawer-item">
+				<a class="list-group-item" style="background-color:transparent" ng-click="go('main.weightForAmputees')" snap-close>
+					<img src="images/option.png" width="30px"/><text>Weight for amputees</text>
+				</a>
+			</div>
+
+			<div class = "drawer-item">
+				<a class="list-group-item" style="background-color:transparent" ng-click="go('main.waistCircumference')" snap-close>
+					<img src="images/option.png" width="30px"/><text>Waist circumference</text>
+				</a>
+			</div>
+
+			<div class = "drawer-item">
+				<a class="list-group-item" style="background-color:transparent" ng-click="go('main.percentageAdequacyOfWeight')" snap-close>
+					<img src="images/option.png" width="30px"/><text>Percentage adequacy of weight</text>
+				</a>
+			</div>
+
+			<div class = "drawer-item">
+				<a class="list-group-item" style="background-color:transparent" ng-click="go('main.percentageOfWeightLoss')" snap-close>
+					<img src="images/option.png" width="30px"/><text>Percentage of weight loss</text>
+				</a>
+			</div>
+			
+
+			<div class = "drawer-item-title">
+				<a class="list-group-item" style="background-color:transparent">
+					
+				</a>
+			</div>
+
+			<div class = "drawer-item">
+				<a class="list-group-item" style="background-color:transparent" ng-click="exitDialog()" snap-close>
+					<img src="images/exit.png" width="30px"/><text>Exit</text>
+				</a>
+			</div>
+		</snap-drawer>
+	</snap-drawers>
+
+	<snap-content style= "border-left: 0px !important; border-right: 0px !important;">
+		<div class="line">
+		    <div snap-toggle class="navigate" style="float:left;">
+		        <img src="images/sliding_menu.png" width="30px" style = "padding-bottom: 5px;"/>
+		    </div>
+		    <text style="padding-left:10px;">Clinical Nutrition</text>
+		</div>
+		<div ui-view></div>
+	</snap-content>
+</div>

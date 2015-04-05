@@ -1,49 +1,61 @@
-<div ng-controller="HomeCtrl">
-	<snap-drawer>
+<div class="col-md-12 col-sm-12 col-xs-12" ng-controller = "HomeCtrl">
+	
+	<h1>INTRODUCTION</h1>
 
-		<div class="list-group ">
-			<a class="list-group-item ">
-				<img height="30px"/>
-				<text class="list-group-item-heading">Menu</text>
-			</a>
-			<a class="list-group-item ">
-				<img src="images/menu_alarm.png" width="30px"/>
-				<text class="list-group-item-heading">Estimate of anthropometric measures</text>
-				
-			</a>
-			<a class="list-group-item" >
-				<img  src="images/menu_alarm.png" width="30px"/>
-				<text class="list-group-item-heading">Assessment the adequacy of anthropometric indicators / mesaures</text>
-				
-			</a>
+	<strong>Why do dietitians need to estimate anthropometric measurement?</strong>
+	<ul>
+	  <li>Many patients are unable to walk (cerebral palsy, stroke, etc.) and / or are unable to roam beyond certain distance scale or stadiometer due to health problems. </li>
+	  <li>The equipment for measuring weight and height are generally far from the beds;</li>
+	  <li>After measuring the height and weight of patients, the dietitians can calculate the nutrient needs and prescribe the most suitable diet for the patients;</li>
+	  <li>In most public hospitals in Brazil are not well equipped with computers. The dietitians are lacking appropriate software in nutrition services due to high cost and require professionals to perform the calculations by hand;</li>
+	</ul>
 
-			<a class="list-group-item">
-				<img  src="images/menu_alarm.png" width="30px"/>
-				<text class="list-group-item-heading">Adjusted of anthropometric mesaures</text>
-				
-			</a>
+	<strong>Why do dietitians need to assessment the anthropometric measurement?</strong>
+	<ul>
+	  <li>The dietitian need to make numerous calculations to prescribe
+the diet of patients (the estimate measures of height and weight 
+this is just one example) and to assessment anthropometric 
+measurements. The spare time that is spent for calculations and 
+approach the dietitian direct care of the patient;</li>
+	  <li>The time spent to perform the calculations can harm the
+prescription diet, if this step is omitted or there is error during 
+calculation done by hand, as well as not performing the 
+calculations result in a standard prescription, which can not meet 
+the needs patient.</li>
+	
+	</ul>
 
-			<a class="list-group-item">
-				<img src="images/menu_alarm.png" width="30px"/>
-				<text class="list-group-item-heading">Help / FAQ</text>
-			</a>
 
-			<a class="list-group-item">
-				<img src="images/menu_alarm.png" width="30px"/>
-				<text class="list-group-item-heading">Exit</text>
-			</a>
+	<strong>Why create an application only to estimate and
+assessment anthropometric measurements?</strong>
+	<ul>
+	  <li>First because there are several estimating equations proposed 
+by different authors and different life stages (adult, older, child 
+with cerebral palsy and etc) and I do not know if an application 
+stand estimate the weight, height and power needs. This 
+should be examined by specialist applications;</li>
+	  <li>Second because a mobile application to enable mobile
+professionals to greater agility, considering that the number of 
+users of smartphones has grown increasingly in the world 
+associated with low cost applications compared to software 
+and increases  the potential scope of tool.</li>
+	
+	</ul>
 
-			
-		</div>
-	</snap-drawer>
-	<snap-content>
 
-		<div>
-			<a class="list-group-item" ng-click="optionClick()">
-				<img snap-toggle src="images/menu_alarm.png" width="30px"/><text>Clinical Nutrition</text>
-			</a>
-		</div>
-		<div ui-view></div>
-	</snap-content>
+<strong>The target audience</strong>
+<ul>
+	<li>Dietitian in the world especially those present in clinics,
+hospitals and home care - if the tool is available in at least two 
+languages;</li>
+	<li>Graduate and Post-Graduate students in the world - if the tool 
+is available in at least two languages;</li>
+</ul>
 
+<div><strong>Note:</strong> All applications for calculating estimates of weight, height and
+etcetera are based on the same principle. There are 
+mathematical equations proposed by various authors and 
+what's different are the variables used by each author and the 
+values ?contained in the formulas, so I presented just one 
+example.</div>
 </div>

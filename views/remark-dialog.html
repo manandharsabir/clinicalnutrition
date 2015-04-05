@@ -1,0 +1,27 @@
+<div class="modal-header">
+	<h4 class="modal-title">Clinical Nutrition Message</h4>
+</div>
+
+<div class="modal-body">
+
+	<label class="control-label" for="messageDate"><strong>Date</strong></label>
+	<label class="control-label" id = "messageDate" ng-model= "messageDate">{{calamityDetails.ActionDateTime}}</label>
+	<br>
+
+	<label class="control-label" for="messageText"><strong>Message</strong></label>
+	<br>
+	<label class="control-label" id="messageText" ng-model="messageText">{{calamityDetails.CalamityDescription}}</label>
+	<br>
+
+
+	<label class="control-label" for="textAreaComment" ><strong>Remarks</strong></label>
+	<textarea class="form-control " rows="5" id="textAreaComment">{{calamityRemarks}}</textarea>
+		
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" ng-click="accept()">Accept</button>
+	<button type="button" class="btn btn-default" ng-click="reject()">Reject</button>
+</div>
+
+

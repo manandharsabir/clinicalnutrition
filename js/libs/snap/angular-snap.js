@@ -1,17 +1,5 @@
 angular.module('snap', []);
 
-(function() {
-  'use strict';
-  var version = [1, 5, 0]
-    , vObj = {
-        full: version.join('.'),
-        major: version[0],
-        minor: version[1],
-        patch: version[2]
-      };
-  angular.module('snap').constant('SNAP_VERSION', vObj);
-}());
-
 angular.module('snap')
   .directive('snapClose', ['$rootScope', 'snapRemote', function($rootScope, snapRemote) {
     'use strict';
@@ -20,7 +8,7 @@ angular.module('snap')
       link: function (scope, element, attrs) {
         element.bind('click', function() {
           // Wrap in anonymous function for easier testing
-          snapRemote.close(scope.$eval(attrs.snapId));
+          snapRemote.close();
           $rootScope.$digest();
         });
       }
@@ -28,7 +16,7 @@ angular.module('snap')
   }]);
 
 angular.module('snap')
-  .directive('snapContent', ['SnapConstructor', 'snapRemote', function (SnapConstructor, snapRemote) {
+  .directive('snapContent', ['snapRemote', function (snapRemote) {
     'use strict';
     return {
       restrict: 'AE',
@@ -38,8 +26,6 @@ angular.module('snap')
         var snapOptions = {
           element: element[0]
         };
-
-        angular.extend(snapOptions, snapRemote.globalOptions);
 
         var snapId = attrs.snapId;
         if(!!snapId) {
@@ -51,12 +37,12 @@ angular.module('snap')
           angular.extend(snapOptions, scope.$eval(attrs.snapOptions));
         }
 
-        snapRemote.register(new SnapConstructor(snapOptions), snapId);
+        snapRemote.register(new window.Snap(snapOptions), snapId);
 
         // watch snapOptions for updates
         if(angular.isDefined(attrs.snapOptions) && attrs.snapOptions) {
           scope.$watch(attrs.snapOptions, function(newSnapOptions) {
-            snapRemote.getSnapper(snapId).then(function(snapper) {
+            snapRemote.getSnapper().then(function(snapper) {
               snapper.settings(newSnapOptions);
             });
           }, true);
@@ -68,23 +54,6 @@ angular.module('snap')
       }
     };
   }]);
-
-angular.module('snap')
-  .directive('snapDragger', ['snapRemote', function(snapRemote) {
-    'use strict';
-    return {
-      restrict: 'AE',
-      link: function(scope, element, attrs) {
-        var snapId = scope.$eval(attrs.snapId);
-        snapRemote.getSnapper(snapId).then(function(snapper) {
-          snapper.settings({
-            dragger: element[0]
-          });
-        });
-      }
-    };
-  }]);
-
 
 angular.module('snap')
   .directive('snapDrawer', function () {
@@ -125,7 +94,7 @@ angular.module('snap')
     'use strict';
     return {
       restrict: 'AE',
-      compile: function(element, attrs) {
+      link: function(scope, element, attrs) {
         element.addClass('snap-drawers');
       }
     };
@@ -154,37 +123,14 @@ angular.module('snap')
   }]);
 
 angular.module('snap')
-.provider('SnapConstructor', function() {
-  'use strict';
-  var constructor = window.Snap;
-
-  this.use = function(Snap) {
-    constructor = Snap;
-  };
-
-  this.$get = function() {
-    return constructor;
-  };
-});
-
-
-angular.module('snap')
-.provider('snapRemote', function SnapRemoteProvider() {
-  'use strict';
-
-  // Global Snap.js options
-  var self = this;
-  this.globalOptions = {};
-
-  this.$get = ['$q', function($q) {
+  .factory('snapRemote', ['$q', function($q) {
+    'use strict';
 
     var snapperStore = {}
       , DEFAULT_SNAPPER_ID = '__DEFAULT_SNAPPER_ID__'
       , exports = {}
       , initStoreForId
       , resolveInStoreById;
-
-    exports.globalOptions = self.globalOptions;
 
     exports.getSnapper = function(id) {
       id = id || DEFAULT_SNAPPER_ID;
@@ -250,7 +196,4 @@ angular.module('snap')
     };
 
     return exports;
-  }];
-
-  return this;
-});
+  }]);

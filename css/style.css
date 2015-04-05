@@ -1,0 +1,135 @@
+/* Put your css in here */
+html, body {
+	width: 100%;
+	height: 100%;
+}
+/*top line*/
+
+.drawer {
+	background-color: rgb(78, 81, 81);
+}
+
+div.drawer-item a, div.drawer-item-title a{
+	border-radius: 0px !important;
+	border: 0px !important;
+}
+
+
+div.drawer-item:hover {
+	background: rgb(44, 142, 81);
+}
+
+div.drawer-item text, div.drawer-item-title text{
+	color: white;
+	/*font-size: 18px;*/
+	vertical-align: middle;
+}
+
+.line{
+	background: rgb(44, 142, 81);
+	color: white;
+	height: 50px;
+	font-size: 25px;
+	padding-top: 7px;
+	padding-left: 15px;
+}
+
+/*
+div li {  
+	font-size: 18px;
+    display: inline-block;
+    left: auto;
+    right: auto; 
+    width: 24%;
+    text-align: center;
+}*/
+
+/*diable text area resize*/
+textarea{
+	resize: none;
+}
+
+
+/*icon for home page*/
+.iconWrapper{
+	margin:0 auto;
+	width:150px;
+	height:150px;
+	text-align:center;
+
+}
+
+.iconWrapper:hover{
+	cursor:pointer;
+	cursor:hand;
+}
+
+.imageBlock{
+	padding-top: 30px;
+	width:100%;
+	margin:0;
+}
+
+
+.textBlock{
+	margin:auto;
+	font-weight: bold;
+}
+
+/*icon for home page*/
+
+
+/*for snap content*/
+.icon-bar {
+	display: block;
+	width: 25px;
+	height: 	2px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	border-radius: 1px;
+	background-color: black;
+}
+
+snap-content {
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+/*for snap content*/
+
+
+
+.right{
+	float:right;
+}
+
+.gap{
+	font-size: 16px;
+	margin-bottom: 4px;
+}
+
+label {
+    font-weight: normal !important;
+}
+
+.nav>li{
+	width: 25%;
+	/*font-size: 18px;*/
+    display: inline-block;
+    left: auto;
+    right: auto; 
+    text-align: center;
+
+}
+
+.nav>li>a {
+	color: black !important;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+	color: rgb(44, 142, 81) !important;
+}
+
+
+
+
