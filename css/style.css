@@ -9,6 +9,10 @@ html, body {
 	background-color: rgb(78, 81, 81);
 }
 
+.drawer-sub-item {
+	padding-left : 10px !important;
+}
+
 div.drawer-item a, div.drawer-item-title a{
 	border-radius: 0px !important;
 	border: 0px !important;

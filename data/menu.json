@@ -1,0 +1,64 @@
+[
+	{
+		"title" : "Estimate of Anthropometric",
+		"subMenus" : [{
+				"index" : 1,
+				"title" : "Weight",
+				"onSelect" : "main.estimateWeight",
+				"icon" : ""
+			}, {
+				"index" : 2,
+				"title" : "Height",
+				"onSelect" : "main.estimateHeight",
+				"icon" : ""
+			}
+		]
+
+	}, {
+		"title" : "Assessment of aqequacy of ",
+		"subMenus" : [{
+				"index" : 1,
+				"title" : "Body Mass Index (BMI)",
+				"onSelect" : "",
+				"icon" : ""
+			}, {
+				"index" : 2,
+				"title" : "Waist circumference",
+				"onSelect" : "main.waistCircumference",
+				"icon" : ""
+			}, {
+				"index" : 3,
+				"title" : "Arm circumference",
+				"onSelect" : "",
+				"icon" : ""
+			}, {
+				"index" : 4,
+				"title" : "Arm Muscle",
+				"onSelect" : "",
+				"icon" : ""
+			}
+		]
+
+	}, {
+		"title" : "Adjusted of Anthropometric",
+		"subMenus" : [{
+				"index" : 1,
+				"title" : "Ideal weight to over",
+				"onSelect" : "main.adjustedWeight",
+				"icon" : ""
+			}, {
+				"index" : 2,
+				"title" : "Adjust weight to obese",
+				"onSelect" : "",
+				"icon" : ""
+			}, {
+				"index" : 3,
+				"title" : "Percentage of weight",
+				"onSelect" : "main.percentageOfWeightLoss",
+				"icon" : ""
+			}
+		]
+	}
+
+	
+]

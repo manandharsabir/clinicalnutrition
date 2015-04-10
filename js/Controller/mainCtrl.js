@@ -1,4 +1,13 @@
-clinicalNutritionApp.controller("MainCtrl",['$rootScope', '$scope', '$state','dialogs','PhonegapService', 'appConfig', function($rootScope, $scope, $state, dialogs, PhonegapService, appConfig) {
+clinicalNutritionApp.controller("MainCtrl",['$rootScope', '$scope', '$state','$http', 'dialogs','PhonegapService', 'appConfig', function($rootScope, $scope, $state,$http,dialogs, PhonegapService, appConfig) {
+
+	$scope.menuItems = [];
+	function loadMenuItems(){
+		$http.get('data/menu.json').success(function(data) {
+      		//alert("data:" + JSON.stringify(data));
+      		$scope.menuItems = data;
+    	});
+	}
+
 
 	function init(){
         $rootScope.$on('PhonegapServiceEvent', function(event, jsonMessage){
@@ -16,8 +25,12 @@ clinicalNutritionApp.controller("MainCtrl",['$rootScope', '$scope', '$state','di
                 console.log('Remark dialog responded-2');
             });
         });
+
+
     	$state.go('main.home');
 	}
+
+	loadMenuItems();
 	
 	init();
 
