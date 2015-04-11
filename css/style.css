@@ -38,16 +38,6 @@ div.drawer-item text, div.drawer-item-title text{
 	padding-left: 15px;
 }
 
-/*
-div li {  
-	font-size: 18px;
-    display: inline-block;
-    left: auto;
-    right: auto; 
-    width: 24%;
-    text-align: center;
-}*/
-
 /*diable text area resize*/
 textarea{
 	resize: none;
@@ -132,6 +122,27 @@ label {
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
 	color: rgb(44, 142, 81) !important;
+}
+
+
+/*//forms validation*/
+.form-control .ng-invalid{
+	border: 1px solid ##FF0000;
+}
+
+form.ng-submitted .ng-invalid
+{
+	border:1px solid #f00;
+}
+form.ng-submitted .ng-invalid
+{
+	border:1px solid #f00;
+}
+
+.form-control:focus{
+	border-color:#ccc;
+    -webkit-box-shadow: none;
+   box-shadow: none;
 }
 
 

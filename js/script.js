@@ -11,10 +11,6 @@ clinicalNutritionApp.constant('appConfig',{
 clinicalNutritionApp.config(function($stateProvider, $urlRouterProvider) {
 
 	$stateProvider
-       /* .state("login", {
-            url : "/login",
-            templateUrl : "views/login.html"
-        })*/
 		.state("main", {
 			url : "/main",
 			templateUrl : "views/main.html"
@@ -23,9 +19,9 @@ clinicalNutritionApp.config(function($stateProvider, $urlRouterProvider) {
             url : "/home",
             templateUrl : "views/home.html"
         })
-        .state("main.estimateHeight", {
-            url : "/estimateHeight",
-            templateUrl : "views/estimateHeight.html"
+        .state("main.estimatedHeight", {
+            url : "/estimatedHeight",
+            templateUrl : "views/estimated-height.html",
         })
         .state("main.estimateWeight", {
             url : "/estimateWeight",
@@ -35,9 +31,9 @@ clinicalNutritionApp.config(function($stateProvider, $urlRouterProvider) {
             url : "/estimateWeight18To60",
             templateUrl : "views/estimateWeight18To60.html"
         })
-        .state("main.adjustedWeight", {
-            url : "/adjustedWeight",
-            templateUrl : "views/adjustedWeight.html"
+        .state("main.toObese", {
+            url : "/toObese",
+            templateUrl : "views/toObese.html"
         })
         .state("main.weightForAmputees", {
             url : "/weightForAmputees",
@@ -55,6 +51,11 @@ clinicalNutritionApp.config(function($stateProvider, $urlRouterProvider) {
             url : "/percentageOfWeightLoss",
             templateUrl : "views/percentageOfWeightLoss.html"
         });
+
+        /* .state("login", {
+            url : "/login",
+            templateUrl : "views/login.html"
+        })*/
 
         
 	

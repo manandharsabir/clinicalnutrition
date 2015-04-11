@@ -1,0 +1,24 @@
+{
+	"ArmCircumferenceMen" : [
+		{	
+			"Age" : ["1","2"], 
+			"Percentil" : ["14.2","14.6","15.0","15.9","17.0","17.6","18.3"]
+		}
+		
+	],
+
+	"ArmCircumferenceWomen" : [
+		{},
+		{}
+	],
+
+	"ArmMuscleCircumferenceMen" : [
+		{},
+		{}
+	],
+
+	"ArmMuscleCircumferenceWomen" : [
+		{},
+		{}
+	]
+}

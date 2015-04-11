@@ -1,0 +1,59 @@
+<div ng-controller="IdealWeightCtrl" class="col-md-12 col-sm-12 col-xs-12">
+	<form class="form-horizontal" ng-submit="submit(form)" name="form" novalidate>
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<h4>Ideal weight</h4>
+				<div>
+					Ideal weight  (kg):
+
+					= current height - 100 cm
+
+					Broca, 1871
+
+
+					Ideal weight  (kg):
+
+					Example: If height is 173 cm
+
+					= current height ? 100 cm
+
+					= 173 - 100
+
+					= 73kg = ideal weight
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+<!--
+
+FORMULA 1: IDEAL WEIGHT (BROCA INDEX)
+Ideal weight  (kg):
+= current height – 100 cm
+Broca, 1871
+EXAMPLE 1: IDEAL WEIGHT (BROCA INDEX)
+Ideal weight  (kg):
+Example: If height is 173 cm
+= current height – 100 cm
+= 173 – 100 
+= 73kg = ideal weight
+FORMULA 2: ADJUSTED WEIGHT TO OVER WEIGHT AND UNDER WEIGHT
+ If    BMI < 18,5kg/m² and BMI > 30kg/m²
+= (current weight – ideal weight) x 0,25 + ideal weight
+Kushner, 1993
+EXAMPLE 2: ADJUSTED WEIGHT TO OBESE
+Adjusted weight to obese (kg): if BMI > 30kg/m²
+= (current weight – ideal weight) x 0,25 + ideal weight
+  Example: weight current = 100 kg                      ideal weight = 73 kg Adjusted weight = (100 – 73) x 0,25 + 73                                         6,75 + 73                                           79,75 kg = adjusted weight
+FORMULA 3: ADJUSTED WEIGHT TO MALNUTRITION
+Adjusted weight to malnutrition (kg):     If BMI < 18kg/m²
+= (ideal weight – current weight) x 0,25 + ideal current
+Kushner, 1993
+EXAMPLE 3: ADJUSTED WEIGHT TO MALNUTRITION
+Adjusted weight to malnutrition (kg): if BMI < 18kg/m²
+= (ideal weight – current weight) x 0,25 + ideal current ideal  weight = 54 kg Current weight = 40 kg
+= (54-40) x 0,25 + 54 = 57,5 kg (adjusted weight to malnutrition) 
+
+-->

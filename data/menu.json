@@ -1,63 +1,92 @@
 [
 	{
-		"title" : "Estimate of Anthropometric",
-		"subMenus" : [{
+		"title" : "Estimate Of Anthropometric Measures",
+		"subMenus" : [
+			{
 				"index" : 1,
-				"title" : "Weight",
-				"onSelect" : "main.estimateWeight",
+				"title" : "Estimated Height",
+				"onSelect" : "main.estimatedHeight",
 				"icon" : ""
-			}, {
+			},
+			{
 				"index" : 2,
-				"title" : "Height",
-				"onSelect" : "main.estimateHeight",
+				"title" : "Estimated Weight",
+				"onSelect" : "main.estimatedWeight",
+				"icon" : ""
+			},
+			{
+				"index" : 2,
+				"title" : "Estimaged Weight For Amputees",
+				"onSelect" : "main.estimatedWeightAmputees",
 				"icon" : ""
 			}
 		]
 
 	}, {
-		"title" : "Assessment of aqequacy of ",
+		"title" : "Adjusted of Anthropometric Measures",
+		"Reference" : "Adjusted.ppt, page 1",
 		"subMenus" : [{
 				"index" : 1,
-				"title" : "Body Mass Index (BMI)",
-				"onSelect" : "",
+				"title" : "Ideal Weight (Broca Index)",
+				"onSelect" : "main.idealWeight",
 				"icon" : ""
 			}, {
 				"index" : 2,
-				"title" : "Waist circumference",
+				"title" : "Adjusted Weight To Over Weight And Under Weight",
+				"onSelect" : "main.AdjToOverAndUnderWeight",
+				"icon" : ""
+			},{
+				"index" : 3,
+				"title" : "Adjusted Weight To Obese",
+				"onSelect" : "main.AdjToObeseWeight",
+				"icon" : ""
+			},{
+				"index" : 4,
+				"title" : "Adjusted Weight To Malnurtition",
+				"onSelect" : "main.AdjToMalnurtitionWeight",
+				"icon" : ""
+			},{
+				"index" : 4,
+				"title" : "Percentage of aqequacy weight",
+				"onSelect" : "main.percentageOfAdequacyWeight",
+				"icon" : ""
+			}
+		]
+	}, {
+		"title" : "Adequacy Of Anthropometric Measurements",
+		"subMenus" : [{
+				"index" : 1,
+				"title" : "Body Mass Index (BMI)",
+				"onSelect" : "main.bodyMassIndex",
+				"icon" : ""
+			}, {
+				"index" : 2,
+				"title" : "Waist Circumference",
 				"onSelect" : "main.waistCircumference",
 				"icon" : ""
 			}, {
+				"index" : 2,
+				"title" : "Percentage Of Adequacy Weight",
+				"onSelect" : "main.waistCircumference",
+				"icon" : ""
+			},{
+				"index" : 4,
+				"title" : "Percentage of weight loss",
+				"onSelect" : "main.percentageOfWeightLoss",
+				"icon" : ""
+			}, {
 				"index" : 3,
-				"title" : "Arm circumference",
+				"title" : "Percentage Of Adequacy Arm Circunference",
 				"onSelect" : "",
 				"icon" : ""
 			}, {
 				"index" : 4,
-				"title" : "Arm Muscle",
+				"title" : "Percentage Of Adequacy Arm Muscle Circunference",
 				"onSelect" : "",
 				"icon" : ""
 			}
 		]
 
-	}, {
-		"title" : "Adjusted of Anthropometric",
-		"subMenus" : [{
-				"index" : 1,
-				"title" : "Ideal weight to over",
-				"onSelect" : "main.adjustedWeight",
-				"icon" : ""
-			}, {
-				"index" : 2,
-				"title" : "Adjust weight to obese",
-				"onSelect" : "",
-				"icon" : ""
-			}, {
-				"index" : 3,
-				"title" : "Percentage of weight",
-				"onSelect" : "main.percentageOfWeightLoss",
-				"icon" : ""
-			}
-		]
 	}
 
 	
