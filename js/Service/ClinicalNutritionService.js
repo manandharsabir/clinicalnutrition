@@ -40,6 +40,36 @@ clinicalNutritionApp.factory("ClinicalNutrition", function($rootScope) {
 				return -1;
 			}
 			return -1;
+		}, 
+
+		estimatedWeight : function(gender, race, age, ac, cc, ss, kh){
+			
+			if (race == ''){
+				//Chumlea et al, 1985
+				if (gender == 'men'){
+					return  (1.73 * ac) + (0.98 * cc) + (0.37 * ss) + ( 1.16 * kh) - 81.69;
+				}else if (gender == 'women'){
+					return (0.98 * ac) + (1.27 * cc) + (0.40 * ss) + (0.87 * kh) - 62.35;
+				}
+			}else if (race != '' && (age > 16 && age <=60)) {
+				//Chumlea et al, 1988
+				if (race == 'white' && gender == 'men'){
+					return (kh * 1.19) + (ac * 3.21) - 86.82;
+				} else if (race == 'white' && gender == 'women'){
+					return (kh * 1.01) + (ac * 2.81) - 60.04;
+				} else if (race == 'black' && gender == 'men') {
+					 return (kh * 1.09) + (ac * 3.14) - 83.72;
+				}else if (race == 'black' && gender == 'women'){
+					return  (kh * 1.24) + (ac * 2.97) - 82.48;
+				}
+			}
+			return -1;
+		},
+		estimatedWeightAmputees : function(weightAfterAmputation, percentageAmputation){
+			return ((weightAfterAmputation * 100)/(100-percentageAmputation));
+
+
+			
 		}
 	}
 });

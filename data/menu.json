@@ -16,7 +16,7 @@
 			},
 			{
 				"index" : 2,
-				"title" : "Estimaged Weight For Amputees",
+				"title" : "Estimated Weight For Amputees",
 				"onSelect" : "main.estimatedWeightAmputees",
 				"icon" : ""
 			}

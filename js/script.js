@@ -23,13 +23,13 @@ clinicalNutritionApp.config(function($stateProvider, $urlRouterProvider) {
             url : "/estimatedHeight",
             templateUrl : "views/estimated-height.html",
         })
-        .state("main.estimateWeight", {
-            url : "/estimateWeight",
-            templateUrl : "views/estimateWeight.html"
+        .state("main.estimatedWeight", {
+            url : "/estimatedWeight",
+            templateUrl : "views/estimated-weight.html"
         })
-        .state("main.estimateWeight18To60", {
-            url : "/estimateWeight18To60",
-            templateUrl : "views/estimateWeight18To60.html"
+        .state("main.estimatedWeightAmputees", {
+            url : "/estimatedWeightAmputees",
+            templateUrl : "views/estimated-weight-amputees.html"
         })
         .state("main.toObese", {
             url : "/toObese",

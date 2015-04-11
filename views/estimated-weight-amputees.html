@@ -1,0 +1,90 @@
+<div ng-controller="EstimatedWeightAmputeesCtrl"  class="col-md-12 col-sm-12 col-xs-12">
+	<form class="form-horizontal" name="form" novalidate>
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<h4>Estimate Of Anthropometric Measures : Estimated Weight For Amputees</h4>
+				<strong>Calculated using: Osterkamp, 1995</strong>
+			</div>
+		</div>
+		
+
+		<div class="form-group" >
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Weight after amputation</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right btn-group " >
+						<input type="number" min="0" step="0.25" name="weightAfterAmputation" placeholder="weight" class="gap form-control " ng-model="weightAfterAmputation" required />
+					</div>
+			    </div>
+			</div>
+		</div>
+
+
+		<div class="form-group" >
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap"></div>
+				<div class="col-md-2 col-sm-2 col-xs-2">
+					<div class = "right btn-group " >
+						Left
+					</div>
+			    </div>
+
+			    <div class="col-md-2 col-sm-2 col-xs-2">
+					<div class = "right btn-group " >
+						Right
+					</div>
+			    </div>
+			</div>
+		</div>
+
+		<div ng-repeat="eachAmputee in amputationArray">
+			<div class="form-group" >
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="col-md-8 col-sm-8 col-xs-8 gap">{{eachAmputee.name}}</div>
+					<div class="col-md-2 col-sm-2 col-xs-2">
+						<div class = "right btn-group " >
+							<input type="checkbox"  ng-model="eachAmputee.checkedLeft" ng-change="selectedAmputeesLeft()">
+						</div>
+				    </div>
+
+				    <div class="col-md-2 col-sm-2 col-xs-2">
+						<div class = "right btn-group " >
+							<input type="checkbox"  ng-model="eachAmputee.checkedRight" ng-change="selectedAmputeesRight()">
+						</div>
+				    </div>
+				</div>
+			</div>
+
+			 
+
+		</div>
+		<!--
+			<pre>{{selectionLeft | json}}</pre>
+			<pre>{{selectionRight | json}}</pre>
+		-->
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-1 col-sm-1 col-xs-1"></div>
+				
+
+				<div class="col-md-10 col-sm-10 col-xs-10">
+					<input  ng-click="calculate(form)" type="submit" class="btn btn-success btn-block btn-lg" value="Calculate"/>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12" ng-show="calculatedWeight.length !== 0">
+				<div class="col-md-12 col-sm-12 col-xs-12 gap"> Weight for amputees (adjusted) is {{calculatedWeight | number:2}}  KG.</div>
+			</div>
+		</div>
+		
+	</form>
+
+</div>
+
+
+
