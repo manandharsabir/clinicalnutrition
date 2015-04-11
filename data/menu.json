@@ -25,64 +25,41 @@
 	}, {
 		"title" : "Adjusted of Anthropometric Measures",
 		"Reference" : "Adjusted.ppt, page 1",
-		"subMenus" : [{
+		"subMenus" : [ 
+			{
 				"index" : 1,
-				"title" : "Ideal Weight (Broca Index)",
-				"onSelect" : "main.idealWeight",
-				"icon" : ""
-			}, {
-				"index" : 2,
 				"title" : "Adjusted Weight To Over Weight And Under Weight",
-				"onSelect" : "main.AdjToOverAndUnderWeight",
-				"icon" : ""
-			},{
-				"index" : 3,
-				"title" : "Adjusted Weight To Obese",
-				"onSelect" : "main.AdjToObeseWeight",
-				"icon" : ""
-			},{
-				"index" : 4,
-				"title" : "Adjusted Weight To Malnurtition",
-				"onSelect" : "main.AdjToMalnurtitionWeight",
-				"icon" : ""
-			},{
-				"index" : 4,
-				"title" : "Percentage of aqequacy weight",
-				"onSelect" : "main.percentageOfAdequacyWeight",
+				"onSelect" : "main.adjustedWeight",
 				"icon" : ""
 			}
 		]
 	}, {
 		"title" : "Adequacy Of Anthropometric Measurements",
-		"subMenus" : [{
+		"subMenus" : [
+			{
 				"index" : 1,
-				"title" : "Body Mass Index (BMI)",
-				"onSelect" : "main.bodyMassIndex",
-				"icon" : ""
-			}, {
-				"index" : 2,
 				"title" : "Waist Circumference",
 				"onSelect" : "main.waistCircumference",
 				"icon" : ""
 			}, {
 				"index" : 2,
 				"title" : "Percentage Of Adequacy Weight",
-				"onSelect" : "main.waistCircumference",
+				"onSelect" : "main.percentageOfAdequacyWeight",
 				"icon" : ""
 			},{
-				"index" : 4,
-				"title" : "Percentage of weight loss",
+				"index" : 3,
+				"title" : "Percentage Of Weight Loss",
 				"onSelect" : "main.percentageOfWeightLoss",
 				"icon" : ""
 			}, {
-				"index" : 3,
-				"title" : "Percentage Of Adequacy Arm Circunference",
-				"onSelect" : "",
+				"index" : 4,
+				"title" : "Percentage Of Adequacy Arm Circumference",
+				"onSelect" : "main.percentageOfAdequacyArmCircumference",
 				"icon" : ""
 			}, {
-				"index" : 4,
-				"title" : "Percentage Of Adequacy Arm Muscle Circunference",
-				"onSelect" : "",
+				"index" : 5,
+				"title" : "Percentage Of Adequacy Arm Muscle Circumference",
+				"onSelect" : "main.percentageOfAdequacyArmMuscleCircumference",
 				"icon" : ""
 			}
 		]

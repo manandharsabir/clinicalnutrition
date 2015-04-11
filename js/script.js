@@ -31,25 +31,34 @@ clinicalNutritionApp.config(function($stateProvider, $urlRouterProvider) {
             url : "/estimatedWeightAmputees",
             templateUrl : "views/estimated-weight-amputees.html"
         })
-        .state("main.toObese", {
-            url : "/toObese",
-            templateUrl : "views/toObese.html"
-        })
-        .state("main.weightForAmputees", {
-            url : "/weightForAmputees",
-            templateUrl : "views/weightForAmputees.html"
+        /*
+        .state("main.idealWeight", {
+            url : "/idealWeight",
+            templateUrl : "views/ideal-weight.html"
+        })*/
+        .state("main.adjustedWeight", {
+            url : "/adjustedWeight",
+            templateUrl : "views/adjusted-weight.html"
         })
         .state("main.waistCircumference", {
             url : "/waistCircumference",
-            templateUrl : "views/waistCircumference.html"
+            templateUrl : "views/waist-circumference.html"
         })
-        .state("main.percentageAdequacyOfWeight", {
-            url : "/percentageAdequacyOfWeight",
-            templateUrl : "views/percentageAdequacyOfWeight.html"
+        .state("main.percentageOfAdequacyWeight", {
+            url : "/percentageOfAdequacyWeight",
+            templateUrl : "views/percentage-of-adequacy-weight.html"
         })
         .state("main.percentageOfWeightLoss", {
             url : "/percentageOfWeightLoss",
-            templateUrl : "views/percentageOfWeightLoss.html"
+            templateUrl : "views/percentage-of-weight-loss.html"
+        })
+        .state("main.percentageOfAdequacyArmCircumference", {
+            url : "/percentageOfAdequacyArmCircumference",
+            templateUrl : "views/percentage-of-adequacy-arm-circumference.html"
+        }) 
+        .state("main.percentageOfAdequacyArmMuscleCircumference", {
+            url : "/percentageOfAdequacyArmMuscleCircumference",
+            templateUrl : "views/percentage-of-adequacy-arm-muscle-circumference.html"
         });
 
         /* .state("login", {

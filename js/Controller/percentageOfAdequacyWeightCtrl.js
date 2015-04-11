@@ -1,4 +1,4 @@
-clinicalNutritionApp.controller('PercentageOfWeightLossCtrl', ['$rootScope','$scope','$state','$location','dialogs','ClinicalNutrition',
+clinicalNutritionApp.controller('PercentageOfAdequacyWeightCtrl', ['$rootScope','$scope','$state','$location','dialogs','ClinicalNutrition',
 	function($rootScope, $scope, $state, $location, dialogs, ClinicalNutrition) {
 		
 		$scope.age = "";

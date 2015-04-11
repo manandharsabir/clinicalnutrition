@@ -1,29 +1,46 @@
-<div ng-controller="IdealWeightCtrl" class="col-md-12 col-sm-12 col-xs-12">
-	<form class="form-horizontal" ng-submit="submit(form)" name="form" novalidate>
+<div ng-controller="IdealWeightCtrl"  class="col-md-12 col-sm-12 col-xs-12">
+	<form class="form-horizontal" name="form" novalidate>
 		<div class="form-group">
 			<div class="col-md-12 col-sm-12 col-xs-12">
-				<h4>Ideal weight</h4>
-				<div>
-					Ideal weight  (kg):
+				<h4>Ideal Weight ( Broca Index )</h4>
+				<strong>Calculated using : Broca, 1871</strong>
+			</div>
+		</div>
 
-					= current height - 100 cm
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Height</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right btn-group " >
+						<input type="number" min="0" step="0.25" name="height" placeholder="height" class="gap form-control " ng-model="height" required/>
+					</div>
+			      
+			    </div>
+			</div>
+		</div>
 
-					Broca, 1871
+		
 
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-1 col-sm-1 col-xs-1"></div>
+				
 
-					Ideal weight  (kg):
-
-					Example: If height is 173 cm
-
-					= current height ? 100 cm
-
-					= 173 - 100
-
-					= 73kg = ideal weight
+				<div class="col-md-10 col-sm-10 col-xs-10">
+					<input  ng-click="calculate(form)" type="submit" class="btn btn-success btn-block btn-lg" value="Calculate"/>
 				</div>
+
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12" ng-show="calculatedValue.length !== 0">
+				<div class="col-md-12 col-sm-12 col-xs-12 gap">The ideal weight is {{calculatedValue | number:2}}  KG.</div>
 			</div>
 		</div>
 	</form>
+
 </div>
 
 

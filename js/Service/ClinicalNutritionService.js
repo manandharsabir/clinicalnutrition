@@ -67,9 +67,93 @@ clinicalNutritionApp.factory("ClinicalNutrition", function($rootScope) {
 		},
 		estimatedWeightAmputees : function(weightAfterAmputation, percentageAmputation){
 			return ((weightAfterAmputation * 100)/(100-percentageAmputation));
+		},
+		idealWeight : function (height){
+			return  (height - 100);
+		},
+
+		adjustedWeight : function(currentWeight, idealWeight){
+			//If    BMI < 18,5kg/m² and BMI > 30kg/m²
+			return (currentWeight - idealWeight) * 0.25 + idealWeight ;
+	
+		},
+		calculateBMI : function (currentWeight, currentHeight){
+			//weight in KG, height in centimeters
+			// Adapted from WHO, 1995, WHO, 2000 and WHO 2004
+			var heightInMeters = currentHeight/100;
+			return (currentWeight/(heightInMeters * heightInMeters));
+		},
+
+		//Underweight < 22kg/m² Healthy weight 22-27kg/m² Overweight > 27kg/m²
+
+
+
+
+		classifyBMI : function (calculatedBMI, age){
+
+			if (age >=20 && age <=60){
+				if (calculatedBMI < 18.50){ //Underweight
+					if (calculatedBMI < 16){
+						return "Underweight - Serve thinness";
+					}else if (calculatedBMI >=16 && calculatedBMI < 17){
+						return "Underweight - Moderate thinness";
+					}else if (calculatedBMI >=17 && calculatedBMI < 18.5){
+						return "Underweight - Mild thinness";
+					}
+				}else if (calculatedBMI >= 18.5 && calculatedBMI < 25){//Normal range
+						return "Normal";
+				} else if (calculatedBMI >= 25){//Overweight
+					if (calculatedBMI >=25 && calculatedBMI < 30){//pre obese
+						return "Overweight - Pre obese";
+					}else if (calculatedBMI >=30){
+						if (calculatedBMI >=30 && calculatedBMI < 35){
+							return "Overweight - Obese class I";
+						}else if (calculatedBMI >=35 && calculatedBMI < 40){
+							return "Overweight - Obese class II";
+						}else if (calculatedBMI >=40){
+							return "Overweight - Obese class III";
+						}
+					}
+				}
+			} else if (age > 60){
+				//Lipschitz, 1994
+
+				if (calculatedBMI < 22){ 
+					return "Underweight";
+				} else if (calculatedBMI >=22 && calculatedBMI <27){
+					return " Healthy weight";
+				} else if (calculatedBMI >=27){
+					return "Overweight";
+				
+				}
+
+			} else {
+				return "NOT DEFINED for age " + age;
+			}
 
 
 			
+		},
+
+		waistCircumference : function (age, gender, waistCircumference){
+			if (age < 20 || age > 60){
+				return "NOT DEFINED for age " + age ;
+			}else {
+				if (gender == 'men'){
+					if (waistCircumference >= 94 && waistCircumference < 102){
+						return "increased";
+					}else if (waistCircumference >=102){
+						return "substantially increased";
+					}
+				}else if  (gender == 'women'){
+					if (waistCircumference >= 80 && waistCircumference < 88){
+						return "increased";
+					}else if (waistCircumference >=88){
+						return "substantially increased";
+					}
+				}
+			}
+			return "normal";	
 		}
 	}
 });
