@@ -4,19 +4,19 @@
 		"subMenus" : [
 			{
 				"index" : 1,
-				"title" : "Estimated Height",
+				"title" : "Height",
 				"onSelect" : "main.estimatedHeight",
 				"icon" : ""
 			},
 			{
 				"index" : 2,
-				"title" : "Estimated Weight",
+				"title" : "Weight",
 				"onSelect" : "main.estimatedWeight",
 				"icon" : ""
 			},
 			{
-				"index" : 2,
-				"title" : "Estimated Weight For Amputees",
+				"index" : 3,
+				"title" : "Weight For Amputees",
 				"onSelect" : "main.estimatedWeightAmputees",
 				"icon" : ""
 			}
@@ -28,7 +28,7 @@
 		"subMenus" : [ 
 			{
 				"index" : 1,
-				"title" : "Adjusted Weight To Over Weight And Under Weight",
+				"title" : "Ideal Weight To Over Weight And Under Weight",
 				"onSelect" : "main.adjustedWeight",
 				"icon" : ""
 			}
