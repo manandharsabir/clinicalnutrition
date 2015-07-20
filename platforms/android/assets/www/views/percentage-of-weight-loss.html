@@ -1,0 +1,85 @@
+<div ng-controller="PercentageOfWeightLossCtrl"  class="col-md-12 col-sm-12 col-xs-12">
+	<form class="form-horizontal" name="form" novalidate>
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<h4>Adequacy Of Anthropometric Measurements: Percentage Of Weight Loss </h4>
+				<strong>BLACKBURN et All, 1977</strong>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Usual Weight</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right btn-group " >
+						<div class="input-group">
+						<input type="number" min="0" step="0.25" name="usualWeight" placeholder="0" class="gap form-control " ng-model="usualWeight" required/>
+						<span class="input-group-addon">KG</span>
+						</div>
+					</div>
+			    </div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Current Weight</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right btn-group " >
+						<div class="input-group">
+						<input type="number" min="0" step="0.25" name="currentWeight" placeholder="0" class="gap form-control " ng-model="currentWeight" required/>
+						<span class="input-group-addon">KG</span>
+						</div>
+					</div>
+			    </div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Time</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right">
+						<select class="form-control" ng-model="time" required>
+						     <option value="">Select</option>
+						     <option value="0.25">1 week</option>
+						     <option value="1">1 month</option>
+						     <option value="3">3 months</option>
+						     <option value="6">6 months</option>
+						</select>
+					</div>
+			    </div>
+			</div>
+		</div>
+
+
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-1 col-sm-1 col-xs-1"></div>
+				
+
+				<div class="col-md-10 col-sm-10 col-xs-10">
+					<input  ng-click="calculate(form)" type="submit" class="btn btn-success btn-block btn-lg" value="Calculate"/>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12" ng-show="adequacyOfWeightLoss.length !== 0">
+				<div class="col-md-12 col-sm-12 col-xs-12 gap">Weight loss is {{adequacyOfWeightLoss | number:2}}  % {{(adequacyOfWeightLossStatus)}}</div>
+			</div>
+		</div>
+	</form>
+
+</div>
+
+
+
+
+
+
+
+
+

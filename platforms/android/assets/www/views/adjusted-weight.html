@@ -1,0 +1,95 @@
+<div ng-controller="AdjustedWeightCtrl"  class="col-md-12 col-sm-12 col-xs-12">
+	<form class="form-horizontal" name="form" novalidate>
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<h4>Adjusted Weight</h4>
+				<strong>Calculated using : Kushner, 1993</strong>
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Age</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right btn-group " >
+						<input type="number" min="0" step="0.25" name="age" placeholder="0" class="gap form-control " ng-model="age" required/>
+					</div>
+			      
+			    </div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Height</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right btn-group " >
+						<div class="input-group">
+						<input type="number" min="0" step="0.25" name="height" placeholder="0" class="gap form-control " ng-model="height" required/>
+						<span class="input-group-addon">cm</span>
+						</div>
+					</div>
+			      
+			    </div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Weight</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right btn-group " >
+						<div class="input-group">
+						<input type="number" min="0" step="0.25" name="weight" placeholder="0" class="gap form-control " ng-model="weight" required/>
+						<span class="input-group-addon">KG</span>
+						</div>
+					</div>
+			      
+			    </div>
+			</div>
+		</div>
+
+
+		
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-1 col-sm-1 col-xs-1"></div>
+				
+
+				<div class="col-md-10 col-sm-10 col-xs-10">
+					<input  ng-click="calculate(form)" type="submit" class="btn btn-success btn-block btn-lg" value="Calculate"/>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12" ng-show="idealWeight.length !== 0">
+				<div class="col-md-12 col-sm-12 col-xs-12 gap">The ideal weight is {{idealWeight | number:2}}  KG.</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12" ng-show="adjustedWeight.length !== 0">
+				<div class="col-md-12 col-sm-12 col-xs-12 gap">The adjusted weight is {{adjustedWeight | number:2}}  KG.</div>
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12" ng-show="calculatedBMI.length !== 0">
+				<div class="col-md-12 col-sm-12 col-xs-12 gap">The Body Mass Index  is {{calculatedBMI | number:2}}  KG/m<sup>2</sup></div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12" ng-show="classifiedBMIInfo.length !== 0">
+				<div class="col-md-12 col-sm-12 col-xs-12 gap">As per BMI, weight is {{classifiedBMIInfo}}.</div>
+			</div>
+		</div>
+	</form>
+
+</div>
+

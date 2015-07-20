@@ -1,0 +1,138 @@
+<div ng-controller="EstimatedWeightCtrl"  class="col-md-12 col-sm-12 col-xs-12">
+	<form class="form-horizontal" name="form" novalidate>
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<h4>Estimate Of Anthropometric Measures : Estimated Weight</h4>
+				<strong>Calculated using:CHUMLEA ET ALL, 1985</strong>
+			</div>
+		</div>
+
+		
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Gender</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right">
+						<select class="form-control" ng-model="gender" required>
+						     <option value="">Select</option>
+						     <option value="men">Men</option>
+						     <option value="women">Women</option>
+						</select>
+					</div>
+			    </div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Race</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right">
+						<select class="form-control" ng-model="race">
+						     <option value="">Select</option>
+						     <option value="black">Black</option>
+						     <option value="white">White</option>
+						</select>
+					</div>
+			    </div>
+			</div>
+		</div>
+
+		<div class="form-group" ng-show="race.length != 0">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Age</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right btn-group " >
+						<input type="number" min="19" max="100" step="0.25" name="age" placeholder="0" class="gap form-control " ng-model="age" ng-required='race.length != 0' />
+					</div>
+			      
+			    </div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Arm circumference</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right btn-group " >
+						<div class="input-group">
+						<input type="number" min="1" step="0.25" name="armCircumference" placeholder="0" class="gap form-control " ng-model="armCircumference" required/>
+						<span class="input-group-addon">cm</span>
+						</div>
+					</div>
+			      
+			    </div>
+			</div>
+		</div>
+
+		<div class="form-group" ng-show = "race.length == 0">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Calf circumference</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right btn-group " >
+						<div class="input-group">
+						<input type="number" min="1" step="0.25" name="calfCircumference" placeholder="0" class="gap form-control " ng-model="calfCircumference" ng-required='race.length == 0'/>
+						<span class="input-group-addon">cm</span>
+						</div>
+					</div>
+			      
+			    </div>
+			</div>
+		</div>
+
+		<div class="form-group" ng-show = "race.length == 0">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Subescapular skinfold</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right btn-group " >
+						<div class="input-group">
+						<input type="number" min="1" step="0.25" name="calfCircumference" placeholder="0" class="gap form-control " ng-model="subescapularSkinfold" ng-required='race.length == 0'/>
+						<span class="input-group-addon">cm</span>
+						</div>
+					</div>
+			      
+			    </div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-8 col-sm-8 col-xs-8 gap">Knee height</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class = "right btn-group " >
+						<div class="input-group">
+						<input type="number" min="1" step="0.25" name="age" placeholder="0" class="gap form-control " ng-model="kneeHeight" required/>
+						<span class="input-group-addon">cm</span>
+						</div>
+					</div>
+			      
+			    </div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-1 col-sm-1 col-xs-1"></div>
+				
+
+				<div class="col-md-10 col-sm-10 col-xs-10">
+					<input  ng-click="calculate(form)" type="submit" class="btn btn-success btn-block btn-lg" value="Calculate"/>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<div class="col-md-12 col-sm-12 col-xs-12" ng-show="estimatedHeight.length !== 0">
+				<div class="col-md-12 col-sm-12 col-xs-12 gap">The estimated weight is {{estimatedWeight | number:2}}  KG.</div>
+			</div>
+		</div>
+		
+	</form>
+
+</div>
+
+
+
